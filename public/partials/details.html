@@ -1,8 +1,8 @@
 <div class="details row">
-	<div class="column small-12 medium-3">
+	<div class="poster-div column small-12 large-3">
 		<img src="data/images/{{movie[0].imdbID}}.jpg" alt="{{movie[0].title}}">
 	</div>
-	<div class="column small-12 medium-9">
+	<div class="column small-12 large-9">
 		<div class="arrows">
 			<a href="#/details/{{prevMovie[0].imdbID}}"><span class="fa fa-3x fa-angle-left left-arrow"></span></a>
 			<a href="#/details/{{nextMovie[0].imdbID}}"><span class="fa fa-3x fa-angle-right right-arrow"></span></a>
@@ -11,10 +11,10 @@
 			<span class="rank">{{movie[0].rank}}</span>
 			{{movie[0].title}}
 		</h2>
-		<h4 class="movie">
-			<span class="highlight">Metascore</span><span>{{movie[0].metascore}}</span>
-			<span class="highlight">IMDB Rating</span><span>{{movie[0].imdbRating}}</span>
-			<span class="highlight">IMDB Votes</span><span>{{movie[0].imdbVotes}}</span>
+		<h4 class="movie row">
+			<div class="small-pad-bottom column small-12 large-4"><span class="highlight">Metascore</span><span>{{movie[0].metascore}}</span></div>
+			<div class="small-pad-bottom column small-12 large-4"><span class="highlight">IMDB Rating</span><span>{{movie[0].imdbRating}}</span></div>
+			<div class="small-pad-bottom column small-12 large-4"><span class="highlight">Votes</span><span>{{movie[0].imdbVotes}}</span></div>
 		</h4>
 		<h5>
 			<span class="rated">Rated {{movie[0].rated}}</span>&middot;
