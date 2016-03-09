@@ -1,1 +1,27 @@
-List
+<input class="search" type='text' placeholder="Search" ng-model="query">
+<select ng-model="sortBy" ng-change="sort()">
+	<optgroup label="Sort By">
+		<option value="title">Title</option>
+		<option value="rank">Rank</option>
+	</optgroup>
+</select>
+<label><input type='radio' name='order' value='+' ng-model="sortUpDown" ng-change="sort()"> Ascending</label>
+<label><input type='radio' name='order' value='-' ng-model="sortUpDown" ng-change="sort()"> Descending</label>
+<ul class="movieList">
+	<li ng-repeat="movie in movies | filter: query | orderBy: sortOrder">
+		<a href="#/details/{{movie.imdbID}}">
+			<img src="data/images/{{movie.imdbID}}.jpg" alt="{{movie.title}}">
+			<h5>
+				<span class="rank">{{movie.rank}}</span>
+				{{movie.title}}
+			</h5>
+			<h5>
+				<ul class="list-genre genre">
+					<li ng-repeat="genre in movie.genre">
+						{{genre}}
+					</li>
+				</ul>
+			</h5>
+		</a>
+	</li>
+</ul>

@@ -167,3 +167,72 @@ ul.genre {
 .highlight:first-child {
 	margin-left: 0px;
 }
+
+.search {
+	margin-bottom: 5px;
+	padding-bottom: 0px;
+}
+
+label {
+	display: inline-block;
+	color: $white;
+	padding-right: 10px;
+}
+
+select {
+	width: auto;
+	margin-right: 10px;
+}
+
+.movieList {
+	list-style: none;
+	text-align: center;
+	margin-left: 0px;
+
+	a {
+		display: block;
+		color: $white;
+	}
+
+	a:hover {
+		color: $white;
+	}
+
+	> li {
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+		width: 400px;
+		height: 240px;
+		padding: 20px;
+		background-color: lighten($tertiary-color, 10%);
+		transition: 0.5s;
+	}
+
+	> li:nth-child(even) {
+		background-color: darken($primary-color, 10%);
+	}
+	
+	> li:hover {
+		background-color: lighten($tertiary-color, 20%);
+	}
+
+	> li:nth-child(even):hover {
+		background-color: darken($primary-color, 20%);
+	}
+
+	img {
+		height: 200px;
+		float: left;
+		margin-right: 10px;
+	}
+}
+
+ul.list-genre {
+	display: inherit;
+	text-align: left;
+
+	li {
+		margin-bottom: 5px;
+	}
+}

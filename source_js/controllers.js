@@ -34,5 +34,15 @@ movieControllers.controller('galleryController', ['$scope', '$http', function($s
 }]);
 
 movieControllers.controller('listController', ['$scope', '$http', function($scope, $http) {
+	$http.get('data/imdb250.json').success(function(data) {
+		$scope.movies = data;
+	});
 
+	$scope.sortUpDown = "+";
+	$scope.sortBy = "title";
+	$scope.sortOrder = $scope.sortUpDown + $scope.sortBy;
+
+	$scope.sort = function() {
+		$scope.sortOrder = $scope.sortUpDown + $scope.sortBy;
+	}
 }]);
