@@ -1,1 +1,169 @@
-// Add any custom Sass & CSS here
+body {
+	background-color: $tertiary-color;
+	color: $white;
+}
+
+h1 {
+	color: $primary-color;
+	background-color: $white;
+	margin-bottom: 0px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.bigger {
+	font-size: 1.5em;
+}
+
+.no-gap {
+	margin-bottom: 0px;
+}
+
+.italic, .italics {
+	font-style: italic;
+}
+
+nav.top-bar {
+	text-align:center;
+}
+
+nav.top-bar ul {
+	display: inline-block;
+	font-weight: bold;
+}
+
+.content {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 0 auto;
+
+	@include breakpoint(medium up) {
+		padding-top: 20px;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+
+ul.filters {
+	
+	margin-left: 0px;
+	list-style: none;
+	text-align: center;
+	display: inline-block;
+
+	li {
+		display: inline-block;
+		background-color: $primary-color;
+		cursor: pointer;
+		border-radius: 5px;
+		padding: 5px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+
+		a {
+			color: $tertiary-color;
+		}
+	}
+
+	li:hover {
+		background-color: lighten($primary-color, 35%);
+
+		a {
+			color: $tertiary-color;
+		}
+	}
+}
+
+ul.movies {
+	text-align: center;
+	margin: 0;
+}
+
+li.thumbs {
+	display: inline-block;
+	list-style: none;
+	vertical-align: top;
+}
+
+img.thumb {
+	width: 150px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+
+h2.movie {
+	margin-bottom: 20px;
+}
+
+h4.movie {
+	margin-bottom: 10px;
+}
+
+.rank {
+	color: $black;
+	background-color: $white;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-right: 10px;
+}
+
+.arrows {
+	float: right;
+}
+
+.left-arrow, .right-arrow {
+	padding-left: 10px;
+	padding-right: 15px;
+	padding-bottom: 5px;
+	cursor: pointer;
+	background-color: transparentize($white, 0.2);
+	color: $black;
+	border-radius: 5px;
+	margin-right: 5px;
+}
+
+.right-arrow {
+	padding-left: 15px;
+	padding-right: 10px;
+}
+
+.left-arrow:hover, .right-arrow:hover {
+	background-color: $white;
+}
+
+.rated, .released, .runtime {
+	padding-right: 10px;
+	padding-left: 5px;
+}
+
+ul.genre {
+	display: inline-block;
+	margin-left: 0px;
+	padding-left: 5px;
+	list-style: none;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		background-color: $primary-color;
+		border-radius: 5px;
+		padding: 0px 5px;
+		margin-right: 10px;
+		color: $tertiary-color;
+	}
+}
+
+.highlight {
+	background-color: $white;
+	border-radius: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 20px;
+	margin-right: 10px;
+	color: $tertiary-color;
+}
+
+.highlight:first-child {
+	margin-left: 0px;
+}
